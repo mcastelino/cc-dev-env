@@ -10,10 +10,7 @@ RUN swupd update -s && \
     swupd update && \
     swupd bundle-add os-core-dev os-dev-extras containers-basic
 
-RUN rpm -ivh --nodeps --force https://download.clearlinux.org/current/x86_64/os/Packages/json-glib-dev-1.2.2-9.x86_64.rpm && \
-    rpm -ivh --nodeps --force https://download.clearlinux.org/current/x86_64/os/Packages/check-dev-0.10.0-13.x86_64.rpm && \
-    rpm -ivh --nodeps --force https://download.clearlinux.org/current/x86_64/os/Packages/glib-dev-2.48.1-29.x86_64.rpm && \
-    rpm -ivh --nodeps --force https://download.clearlinux.org/current/x86_64/os/Packages/subunit-dev-1.2.0-29.x86_64.rpm
+RUN rpm -ivh --nodeps --force https://download.clearlinux.org/current/x86_64/os/Packages/json-glib-dev-1.2.2-9.x86_64.rpm
 
 RUN mkdir -p /var/run/ && \
     mkdir -p /etc/docker/ && \
