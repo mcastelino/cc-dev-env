@@ -15,11 +15,12 @@ To launch docker with cc-oci-runtime as the runtime
 --------------------------------------------------------------------
 Within the container
 
-1. Launch the docker daemon
+### Launch the docker daemon
 ```
 ./run_dockerd
 ```
-2. Launch a clear container
+
+### Launch a clear container
 ```
 docker run -it debian
 ```
