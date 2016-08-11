@@ -2,15 +2,6 @@
 
 Quickstart container for developing and testing the [cc-oci-runtime] (https://github.com/01org/cc-oci-runtime). The source code for the runtime is automatically downloaded and built as part of the creation of this container.
 
-# Building this container
-
-```
-git clone https://github.com/mcastelino/cc-dev-env
-cd cc-dev-env
-sudo docker build --build-arg HTTP_PROXY="your proxy if needed" --build-arg HTTPS_PROXY="your proxy if needed" -t mcastelino/cc-dev-env .
-```
-
-
 Running this container
 ------------------------------
 ```
@@ -34,4 +25,13 @@ docker run -it debian
 ```
 
 This will launch a clear container within the docker clearlinux container
+
+# Building this container from Dockerfile
+
+```
+git clone https://github.com/mcastelino/cc-dev-env
+cd cc-dev-env
+sudo docker build --build-arg HTTP_PROXY="your proxy if needed" --build-arg HTTPS_PROXY="your proxy if needed" -t mcastelino/cc-dev-env .
+```
+
 
