@@ -10,7 +10,22 @@ RUN swupd update -s && \
     swupd update && \
     swupd bundle-add os-core-dev os-dev-extras containers-basic
 
+#Ensure that we update past format bumps
+RUN swupd update -s && \
+    swupd update
+
+RUN swupd update -s && \
+    swupd update
+
+RUN swupd update -s && \
+    swupd update
+
+RUN swupd update -s && \
+    swupd update
+
 RUN rpm -ivh --nodeps --force https://download.clearlinux.org/current/x86_64/os/Packages/json-glib-dev-1.2.2-9.x86_64.rpm
+
+RUN rpm -ivh --nodeps --force https://download.clearlinux.org/current/x86_64/os/Packages/libmnl-dev-1.0.4-9.x86_64.rpm
 
 RUN mkdir -p /var/run/ && \
     mkdir -p /etc/docker/ && \
