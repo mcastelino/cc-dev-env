@@ -5,7 +5,7 @@ Quickstart container for developing and testing the [cc-oci-runtime] (https://gi
 Running this container
 ------------------------------
 ```
-sudo docker run -it -e HTTP_PROXY="xxx" -e HTTPS_PROXY="yyy" --privileged mcastelino/cc-dev-env
+sudo docker run -it -e HTTP_PROXY=$http_proxy -e HTTPS_PROXY=$https_proxy --privileged mcastelino/cc-dev-env
 ```
 
 The container needs to run as privileged in order to launch docker clear containers from within the clearlinux docker container. 
@@ -32,7 +32,7 @@ This will launch a clear container within the docker clearlinux container
 ```
 git clone https://github.com/mcastelino/cc-dev-env
 cd cc-dev-env
-sudo docker build --build-arg HTTP_PROXY="your proxy if needed" --build-arg HTTPS_PROXY="your proxy if needed" -t mcastelino/cc-dev-env .
+sudo docker build --build-arg HTTP_PROXY=$http_proxy --build-arg HTTPS_PROXY=$https_proxy -t mcastelino/cc-dev-env .
 ```
 
 
